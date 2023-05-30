@@ -37,7 +37,7 @@ class IPv6_APP(tk.Tk):
         # Clear the mainFrame
         for widget in self.mainFrame.winfo_children():
             widget.destroy()
-
+        self.ip_fields = []
         # Create and display the route aggregation screen
         self.aggregation_frame = tk.Frame(self.mainFrame, bg="#57A0D3")
         self.aggregation_frame.pack(fill="both", expand=True)
@@ -64,7 +64,7 @@ class IPv6_APP(tk.Tk):
         # Clear the mainFrame
         for widget in self.mainFrame.winfo_children():
             widget.destroy()
-
+        self.ip_fields = []
         # Create and display the table summary screen
         self.summary_frame = tk.Frame(self.mainFrame, bg="#57A0D3")
         self.summary_frame.pack(fill="both", expand=True)
@@ -112,3 +112,74 @@ class IPv6_APP(tk.Tk):
         else:
             mb.showinfo("Maximum Fields Reached", "You have reached the maximum number of IP address fields (14).")
 
+    def aggregate_output(self):
+        ip_addresses = []
+        for ip_field in self.ip_fields:
+            ip = ip_field.get().strip()
+            if ip:
+                ip_addresses.append(ip)
+
+        if len(ip_addresses) < 2:
+            mb.showerror("Insufficient IP Addresses", "Please enter at least 2 IP addresses.")
+            return
+
+        # Clear the mainFrame
+        for widget in self.mainFrame.winfo_children():
+            widget.destroy()
+
+        # Display the aggregated IP addresses
+        ip_label = tk.Label(self.mainFrame, text="Aggregated IP Addresses:", font="Ubuntu 16 bold", bg="#ADD8E6")
+        ip_label.pack(pady=10)
+
+        for ip in ip_addresses:
+            ip_entry = tk.Label(self.mainFrame, text=ip, font="Ubuntu 12", bg="#ADD8E6")
+            ip_entry.pack()
+
+        button_frame = tk.Frame(self.mainFrame, bg="#ADD8E6")
+        button_frame.pack(side="bottom", pady=50)
+
+        try_again_button = tk.Button(button_frame, text="Try Again!", font="Ubuntu 12 bold", command=self.clear_and_go_back)
+        try_again_button.pack(side="left", padx=10)
+
+        exit_button = tk.Button(button_frame, text="Exit GUI", font="Ubuntu 12 bold", command=self.end_application)
+        exit_button.pack(side="left", padx=10)
+
+        button_frame.pack(anchor="center")
+
+
+    def summary_output(self):
+        ip_addresses = []
+        for ip_field in self.ip_fields:
+            ip = ip_field.get().strip()
+            if ip:
+                ip_addresses.append(ip)
+
+        if len(ip_addresses) < 2:
+            mb.showerror("Insufficient IP Addresses", "Please enter at least 2 IP addresses.")
+            return
+
+        # Clear the mainFrame
+        for widget in self.mainFrame.winfo_children():
+            widget.destroy()
+
+        # Display the summarized IP addresses
+        ip_label = tk.Label(self.mainFrame, text="Summarized IP Addresses:", font="Ubuntu 16 bold", bg="#ADD8E6")
+        ip_label.pack(pady=10)
+
+        for ip in ip_addresses:
+            ip_entry = tk.Label(self.mainFrame, text=ip, font="Ubuntu 12", bg="#ADD8E6")
+            ip_entry.pack()
+
+        button_frame = tk.Frame(self.mainFrame, bg="#ADD8E6")
+        button_frame.pack(side="bottom", pady=50)
+
+        try_again_button = tk.Button(button_frame, text="Try Again!", font="Ubuntu 12 bold", command=self.clear_and_go_back)
+        try_again_button.pack(side="left", padx=10)
+
+        exit_button = tk.Button(button_frame, text="Exit GUI", font="Ubuntu 12 bold", command=self.end_application)
+        exit_button.pack(side="left", padx=10)
+
+        button_frame.pack(anchor="center")
+        
+    def end_application(self):
+        self.destroy()

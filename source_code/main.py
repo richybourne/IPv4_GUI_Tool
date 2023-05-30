@@ -15,7 +15,8 @@ def main():
     Launch.title("IPv6 Route Aggregation and Table Summary")
     # Load program
     Launch.login_screen()
-    Launch.mainloop() 
+    Launch.mainloop()
+    exit()
 
 if __name__ == "__main__":
     main()
