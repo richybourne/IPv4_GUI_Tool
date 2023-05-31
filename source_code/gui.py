@@ -5,7 +5,7 @@ from tkinter import ttk
 from tkinter import messagebox as mb
 from PIL import Image, ImageTk
 # Helper files
-import validator as ipchecker
+import ipvalidator as ipchecker
 import aggregate as ipv4_aggregater
 
 class IPv4_APP(tk.Tk):
