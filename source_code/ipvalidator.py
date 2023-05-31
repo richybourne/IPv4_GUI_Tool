@@ -8,7 +8,7 @@ def validate_ips(ips):
 
 def validate_ip(ip):
     try:
-        ipaddress.ip_address(ip)
+        ipaddress.ip_network(ip)
         return True
     except ValueError:
         return False

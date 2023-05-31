@@ -6,6 +6,7 @@ from tkinter import messagebox as mb
 from PIL import Image, ImageTk
 # Helper files
 import validator as ipchecker
+import aggregate as ipv4_aggregater
 
 class IPv4_APP(tk.Tk):
     def __init__(self):
@@ -93,7 +94,7 @@ class IPv4_APP(tk.Tk):
         label.pack(side="left", padx=5)
 
         ip_field = tk.Entry(field_frame, font="Ubuntu 12")
-        ip_field.pack(side="left", fill="x", anchor="center", expand=True, padx=80)
+        ip_field.pack(side="left", fill="x", anchor="center", expand=True, padx=(42,80))
 
         self.ip_fields.append(ip_field)
 
@@ -151,6 +152,9 @@ class IPv4_APP(tk.Tk):
             mb.showerror("Insufficient IP Addresses", "Please enter at least 2 IP addresses.")
             return
 
+        # Perform route aggregation
+        aggregated_ip_address = ipv4_aggregater.perform_ipv4_route_aggregation(ip_addresses)
+        
         # Clear the mainFrame
         for widget in self.mainFrame.winfo_children():
             widget.destroy()
@@ -158,11 +162,9 @@ class IPv4_APP(tk.Tk):
         # Display the aggregated IP addresses
         ip_label = tk.Label(self.mainFrame, text="Aggregated IP Addresses:", font="Ubuntu 30 bold", bg="#ADD8E6", fg="black")
         ip_label.pack(pady=10)
-        ip_entry = tk.Label(self.mainFrame, text=ip, font="Ubuntu 16", bg="#ADD8E6", fg="black")
+        
+        ip_entry = tk.Label(self.mainFrame, text=aggregated_ip_address, font="Ubuntu 16", bg="#ADD8E6", fg="black")
         ip_entry.pack(pady=5)
-        for ip in ip_addresses:
-            ip_entry = tk.Label(self.mainFrame, text=ip, font="Ubuntu 16", bg="#ADD8E6", fg="black")
-            ip_entry.pack(pady=5)
 
         button_frame = tk.Frame(self.mainFrame, bg="#ADD8E6")
         button_frame.pack(side="bottom", pady=50)
