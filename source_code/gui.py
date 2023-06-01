@@ -41,7 +41,7 @@ class IPv4_APP(tk.Tk):
         description_frame = tk.Frame(self.headerFrame, bg="#ADD8E6")
         description_frame.pack(fill="both", pady=70, padx=70, anchor="center", side="bottom", expand=True)
         description_label = tk.Label(description_frame, 
-                                     text="Usage: This is a GUI application to assist with automatic and rapid IPv4 manipulation. \nPlease select a choice to perform either Route Aggregation or Longest Prefix Match and follow subsequent instructions", 
+                                     text="Usage: This is a GUI application to assist with automatic and rapid IPv4 manipulation. \nPlease select a choice to perform either Route Aggregation or Longest Prefix Match and follow subsequent instructions!", 
                                      font="Ubuntu 14", bg="#ADD8E6", fg="black")
         description_label.pack(padx=10, ipadx=10, anchor="center", side="bottom", expand=True, fill="both")
 
