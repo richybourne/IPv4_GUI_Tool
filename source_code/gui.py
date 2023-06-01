@@ -176,7 +176,7 @@ class IPv4_APP(tk.Tk):
             widget.destroy()
 
         # Display the aggregated IP addresses
-        ip_label = tk.Label(self.mainFrame, text="Your Aggregated IP Addresses:", font="Ubuntu 30 bold", bg="#ADD8E6", fg="black")
+        ip_label = tk.Label(self.mainFrame, text="Your Aggregated IP Address:", font="Ubuntu 30 bold", bg="#ADD8E6", fg="black")
         ip_label.pack(pady=10)
         
         ip_entry = tk.Label(self.mainFrame, text=aggregated_ip_address, font="Ubuntu 20", bg="#ADD8E6", fg="black", border=6, relief="groove")
@@ -239,8 +239,8 @@ class IPv4_APP(tk.Tk):
         for widget in self.mainFrame.winfo_children():
             widget.destroy()
 
-        # Display the summarized IP addresses
-        ip_label = tk.Label(self.mainFrame, text="Summarized IP Addresses:", font="Ubuntu 30 bold", bg="#ADD8E6", fg="black")
+        # Display the Longest Matching IP
+        ip_label = tk.Label(self.mainFrame, text="Your Longest Prefix Matching IP Address:", font="Ubuntu 30 bold", bg="#ADD8E6", fg="black")
         ip_label.pack(pady=10)
 
         # Perform best match lookup
