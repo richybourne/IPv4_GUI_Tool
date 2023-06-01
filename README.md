@@ -15,17 +15,6 @@ Within the folder, you will find:
 - bestmatch.py   | A helper function to perform the longest prefix-matching algorithm/process. 
 - main.py        | The main program that starts up the GUI and continues the launch.
 
-## Details
-On launch up, the user has two choices:
-![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/2b4a3566-8962-4598-a49e-84db9c246444)
-If Route Aggregation is selected the user is presented with:
-![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/49cb8bd1-0246-44d4-8c97-2b6b87cd652d)
-After the user adds desired IP address fields, they insert IPv4 network addresses:
-![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/b037e20c-5015-4afe-afa8-1be74f05cb2a)
-Upon selecting Aggregate, the user is presented with the results:
-![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/86231235-6387-4a43-961e-01b7c4206ed8)
-
-
 ## Usage
 If you would like to run the program, please clone this repo and run main.
 Before running the main, ensure that you have:
@@ -42,3 +31,21 @@ pip install ipaddress
 ```
 pip install os-sys
 ```
+## Details
+On launch up, the user has two choices:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/2b4a3566-8962-4598-a49e-84db9c246444)
+If Route Aggregation is selected the user is presented with:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/49cb8bd1-0246-44d4-8c97-2b6b87cd652d)
+After the user adds desired IP address fields, they insert IPv4 network addresses:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/b037e20c-5015-4afe-afa8-1be74f05cb2a)
+Upon selecting Aggregate!, the user is presented with the results:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/d8983fdf-bfad-489b-a986-b844b4e30120)
+Say the user presse Try Again!, then we are taken back to our first two choices, say the user hits Longest Prefix Match:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/101fab84-3874-4b3c-b310-0e9556701cad)
+First, the user selects the main address that will be compared, in otherwords, the destination IPv4 address:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/0b7c58de-4964-438a-aaaf-19e38593edb2)
+Now, the user adds desired amount of IP address fields to compare against:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/0da94b33-6aec-4491-b70c-324ee0f5f676)
+Upon selecting Find Best Match!, the user is presented with the results:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/6a23771f-12bb-42f7-b735-a73ba419d8dc)
+If the user hits Exit Gui, then the program ends
