@@ -16,6 +16,14 @@ Within the folder, you will find:
 - main.py        | The main program that starts up the GUI and continues the launch.
 
 ## Details
+On launch up, the user has two choices:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/2b4a3566-8962-4598-a49e-84db9c246444)
+If Route Aggregation is selected the user is presented with:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/49cb8bd1-0246-44d4-8c97-2b6b87cd652d)
+After the user adds desired IP address fields, they insert IPv4 network addresses:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/b037e20c-5015-4afe-afa8-1be74f05cb2a)
+Upon selecting Aggregate, the user is presented with the results:
+![image](https://github.com/richybourne/IPv4_GUI_Tool/assets/99927081/86231235-6387-4a43-961e-01b7c4206ed8)
 
 
 ## Usage
