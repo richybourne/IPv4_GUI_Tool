@@ -9,7 +9,7 @@ def main():
     # Start the application
     Launch=gui.IPv4_APP() # intiliaze the tk class
     # Set window properties
-    Launch.geometry("1260x680")
+    Launch.geometry("1260x700")
     Launch.resizable(False, False)
     # Set GUI properties
     Launch.title("IPv4 Route Aggregation and Longest Prefix Match")
